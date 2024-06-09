@@ -6,7 +6,7 @@ import { useState } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 
 export default function Home() {
-  const [isLoading, setisLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
 
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <Toast />
       <main className="bg-background w-full h-screen flex items-center justify-center">
         <div className="w-full max-w-[420px] bg-white rounded-xl drop-shadow-md p-8">
-          <ImageUploader />
+          <ImageUploader setIsLoading={setIsLoading} setImageUrl={setImageUrl} />
         </div>
       </main>
     </>
